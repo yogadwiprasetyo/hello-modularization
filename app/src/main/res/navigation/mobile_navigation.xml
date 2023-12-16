@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/home_navigation">
+
+    <include app:graph="@navigation/home_navigation"/>
+    <include app:graph="@navigation/search_navigation"/>
+    <include app:graph="@navigation/favorite_navigation"/>
+    <include app:graph="@navigation/profile_navigation"/>
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="pras.learn.detail.DetailFragment"
+        android:label="Detail"
+        tools:layout="@layout/fragment_detail">
+        <deepLink
+            android:id="@+id/deepLinkDetail"
+            app:uri="android-app://hello.modularization/detail_fragment" />
+    </fragment>
+
+    <include-dynamic
+        android:id="@+id/reviewGraph"
+        app:moduleName="pras.learn.modularization"
+        app:graphResName="review_navigation"
+        app:graphPackage="pras.learn.modularization.review">
+        <deepLink
+            android:id="@+id/deepLinkReview"
+            app:uri="android-app://hello.modularization/review_fragment" />
+    </include-dynamic>
+</navigation>

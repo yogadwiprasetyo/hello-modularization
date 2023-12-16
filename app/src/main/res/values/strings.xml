@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Hello Modularization</string>
+    <string name="title_feature">Feature</string>
+    <string name="title_activity_base">BaseActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_search">Search</string>
+    <string name="title_favorite">Favorite</string>
+    <string name="title_profile">Profile</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_review">Review</string>
+</resources>
